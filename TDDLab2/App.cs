@@ -61,11 +61,6 @@ namespace TDDLab2
                     return false;
                 }
             }
-
-            public object newName()
-            {
-                throw new NotImplementedException();
-            }
     }
 
 }

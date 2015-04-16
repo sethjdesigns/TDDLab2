@@ -75,17 +75,5 @@ namespace TDDLab2Test
 
             Assert.Equal(expected, checkAgeProp);
         }
-
-        [Fact]
-        public void ChangeName()
-        {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
-            var newName = person1.newName();
-            var expected = "Seth";
-
-            Assert.Equal(expected, newName);
-
-
-        }
     }
 }
