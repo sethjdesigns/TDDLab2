@@ -21,5 +21,14 @@ namespace TDDLab2Test
             Assert.Equal(expected, checkName);
         }
         
+        [Fact]
+        public void GetBirthday()
+        {
+            var person1 = new Person("Brandon");
+            var checkBirthday = person1.checkBirthday();
+            var expected = new DateTime(1990, 3, 17);
+
+            Assert.Equal(expected, checkBirthday);
+        }
     }
 }

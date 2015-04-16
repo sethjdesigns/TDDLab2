@@ -20,6 +20,11 @@ namespace TDDLab2
             {
                 return name;
             }
+
+            public object checkBirthday()
+            {
+                throw new NotImplementedException();
+            }
     }
 
 }
