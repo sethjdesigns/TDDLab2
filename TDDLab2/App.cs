@@ -13,6 +13,7 @@ namespace TDDLab2
         private string dateOfBirth;
         private DateTime birthday;
         private string social;
+        public int age;
 
             public Person(string name, string dateOfBirth, string social)
             {
@@ -20,6 +21,9 @@ namespace TDDLab2
                 this.dateOfBirth = dateOfBirth;
                 birthday = DateTime.Parse(dateOfBirth);
                 this.social = social;
+                var now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
+                var dob = float.Parse(birthday.ToString("yyyy.MMdd"));
+                age = (int)(now - dob);
             }
 
             public string checkName()

@@ -64,5 +64,16 @@ namespace TDDLab2Test
 
             Assert.Equal(expected, checkEligble);
         }
+
+        //Check if Age prop works
+        [Fact]
+        public void AgeProp()
+        {
+            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var checkAgeProp = person1.age;
+            var expected = 25;
+
+            Assert.Equal(expected, checkAgeProp);
+        }
     }
 }
