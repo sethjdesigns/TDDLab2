@@ -85,8 +85,6 @@ namespace TDDLab2Test
             var expected = "Seth";
 
             Assert.Equal(expected, newName);
-
-
         }
 
         //check if firstname lastname works
@@ -111,14 +109,20 @@ namespace TDDLab2Test
             Assert.Equal(expected, formatLastFirst);
         }
 
+
+        // check if list is formatted
         [Fact]
         public void ComparePeople()
         {
-            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
-            var person2 = new Person("Seth Johnson", "1985/4/14", "123-45-6789");
-            var person3 = new Person("Seth Johnson", "1999/7/26", "111-22-3333");
-            List<Person> people = new List<Person>;
-            List.Add(new Person() {name = "Brandon Allen", dob = "1990/3/17" });
+
+            List<Person> list = new List<Person>();
+            list.Add(new Person("Brandon Allen", "1990/3/17", "123-12-4321") { firstName = "Brandon", lastName = "Allen", birthday = new DateTime(1990, 4, 14)});
+            list.Add(new Person("Seth Johnson", "1986/1/26", "123-12-1234") { firstName = "Seth", lastName = "Johnson", birthday = new DateTime(1986, 1, 26) });
+            list.Add(new Person("Seth Johnson", "1988/3/17", "123-12-4321") { firstName = "Brandon", lastName = "Allen", birthday = new DateTime(1965, 2, 24) });
+
+            list.Sort();
+
+            Assert.Equal("Allen", list[0].lastName);
 
         }
     }

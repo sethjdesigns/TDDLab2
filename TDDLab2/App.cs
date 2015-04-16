@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace TDDLab2
 {
 
-    public class Person 
+    public class Person : IComparable<Person>
     {
-        private string name;
-        private string dateOfBirth;
-        private DateTime birthday;
-        private string social;
+        public string name;
+        public string dateOfBirth;
+        public DateTime birthday;
+        public string social;
         public int age;
         public string firstName;
         public string lastName;
@@ -23,12 +23,14 @@ namespace TDDLab2
             public Person(string name, string dateOfBirth, string social)
             {
                 this.name = name;
+                this.dateOfBirth = dateOfBirth;
+                this.social = social;
+
                 names = name.Split();
                 firstName = names[0];
                 lastName = names[1];
-                this.dateOfBirth = dateOfBirth;
+
                 birthday = DateTime.Parse(dateOfBirth);
-                this.social = social;
                 now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
                 dob = float.Parse(birthday.ToString("yyyy.MMdd"));
                 age = (int)(now - dob);
@@ -83,6 +85,19 @@ namespace TDDLab2
                 var lastFirst = lastName + ", " + firstName;
                 return lastFirst;
             }
-    }
 
+            public int CompareTo(Person other)
+            {
+                // Alphabetic sort if birthday is equal. [A to Z]
+                if (this.birthday == other.birthday)
+                {
+                    return this.lastName.CompareTo(other.lastName);
+                }
+
+                // Default to lastname sort. [High to low]
+                return this.lastName.CompareTo(other.lastName);
+            }
+
+
+    }
 }
