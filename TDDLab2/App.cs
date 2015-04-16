@@ -77,6 +77,11 @@ namespace TDDLab2
             {
                 return name;
             }
+
+            public object formatLastFirst()
+            {
+                throw new NotImplementedException();
+            }
     }
 
 }

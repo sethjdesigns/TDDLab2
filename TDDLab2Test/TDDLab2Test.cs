@@ -97,5 +97,15 @@ namespace TDDLab2Test
 
             Assert.Equal(expected, formatFirstLast);
         }
+
+        [Fact]
+        public void FormatLastFirst()
+        {
+            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var formatLastFirst = person1.formatLastFirst();
+            var expected = "Allen, Brandon";
+
+            Assert.Equal(expected, formatLastFirst);
+        }
     }
 }
