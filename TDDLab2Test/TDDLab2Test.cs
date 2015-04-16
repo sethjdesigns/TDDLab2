@@ -110,5 +110,16 @@ namespace TDDLab2Test
 
             Assert.Equal(expected, formatLastFirst);
         }
+
+        [Fact]
+        public void ComparePeople()
+        {
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
+            var person2 = new Person("Seth Johnson", "1985/4/14", "123-45-6789");
+            var person3 = new Person("Seth Johnson", "1999/7/26", "111-22-3333");
+            List<Person> people = new List<Person>;
+            List.Add(new Person() {name = "Brandon Allen", dob = "1990/3/17" });
+
+        }
     }
 }
