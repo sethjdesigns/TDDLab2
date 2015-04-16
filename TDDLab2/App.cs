@@ -50,9 +50,15 @@ namespace TDDLab2
                 return age;
             }
 
-            public object canVote()
+            public bool canVote()
             {
-                throw new NotImplementedException();
+                if ((this.age >= 18) && (this.social.Length == 11))
+                {
+
+                    return true;
+                }
+
+               
             }
     }
 
