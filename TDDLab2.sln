@@ -5,6 +5,13 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab2", "TDDLab2\TDDLab2.csproj", "{19C5BC5A-AE64-4AB5-A6A3-E88C371CD160}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab2Test", "TDDLab2Test\TDDLab2Test.csproj", "{AF8CC00C-DB96-42E2-AE66-95B89AC70746}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DAFB611A-1EB6-45F3-A8A9-0C95756723B9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{19C5BC5A-AE64-4AB5-A6A3-E88C371CD160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C5BC5A-AE64-4AB5-A6A3-E88C371CD160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C5BC5A-AE64-4AB5-A6A3-E88C371CD160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8CC00C-DB96-42E2-AE66-95B89AC70746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8CC00C-DB96-42E2-AE66-95B89AC70746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8CC00C-DB96-42E2-AE66-95B89AC70746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8CC00C-DB96-42E2-AE66-95B89AC70746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
