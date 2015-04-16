@@ -14,7 +14,7 @@ namespace TDDLab2Test
         [Fact]
         public void CreateNewPerson() 
         {
-            var person1 = new Person("Brandon", "1990/3/17");
+            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
             var checkName = person1.checkName();
             var expected = "Brandon";
 
@@ -25,7 +25,7 @@ namespace TDDLab2Test
         [Fact]
         public void GetBirthday()
         {
-            var person1 = new Person("Brandon", "1990/3/17");
+            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
             var checkBirthday = person1.checkBirthday();
             var expected = new DateTime(1990, 3, 17);
 
@@ -36,7 +36,7 @@ namespace TDDLab2Test
         [Fact]
         public void GetSSN()
         {
-            var person1 = new Person("Brandon", "1990/3/17");
+            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
             var checkSocial = person1.checkSSN();
             var expected = "123-12-1234";
 

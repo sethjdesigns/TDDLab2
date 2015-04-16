@@ -11,13 +11,15 @@ namespace TDDLab2
     {
         private string name;
         private string dateOfBirth;
-        public DateTime birthday;
+        private DateTime birthday;
+        private string social;
 
-            public Person(string name, string dateOfBirth)
+            public Person(string name, string dateOfBirth, string social)
             {
                 this.name = name;
                 this.dateOfBirth = dateOfBirth;
                 birthday = DateTime.Parse(dateOfBirth);
+                this.social = social;
             }
 
             public string checkName()
@@ -32,7 +34,7 @@ namespace TDDLab2
 
             public object checkSSN()
             {
-                throw new NotImplementedException();
+                return social;
             }
     }
 
