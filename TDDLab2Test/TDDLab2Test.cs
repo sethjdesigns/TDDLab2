@@ -76,6 +76,7 @@ namespace TDDLab2Test
             Assert.Equal(expected, checkAgeProp);
         }
 
+        //Check if change name works
         [Fact]
         public void ChangeName()
         {
@@ -88,6 +89,7 @@ namespace TDDLab2Test
 
         }
 
+        //check if firstname lastname works
         [Fact]
         public void FormatFirstLast() 
         {
@@ -98,6 +100,7 @@ namespace TDDLab2Test
             Assert.Equal(expected, formatFirstLast);
         }
 
+        // check if lastname firstname works
         [Fact]
         public void FormatLastFirst()
         {
