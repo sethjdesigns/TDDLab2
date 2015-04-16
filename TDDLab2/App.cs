@@ -36,6 +36,12 @@ namespace TDDLab2
             {
                 return social;
             }
+
+
+            public object checkAge()
+            {
+                throw new NotImplementedException();
+            }
     }
 
 }
