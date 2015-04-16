@@ -29,6 +29,11 @@ namespace TDDLab2
             {
                 return birthday;
             }
+
+            public object checkSSN()
+            {
+                throw new NotImplementedException();
+            }
     }
 
 }

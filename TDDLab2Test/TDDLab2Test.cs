@@ -31,5 +31,16 @@ namespace TDDLab2Test
 
             Assert.Equal(expected, checkBirthday);
         }
+
+        //Check to see if we can add SS# arg
+        [Fact]
+        public void GetSSN()
+        {
+            var person1 = new Person("Brandon", "1990/3/17");
+            var checkSocial = person1.checkSSN();
+            var expected = "123-12-1234";
+
+            Assert.Equal(expected, checkSocial);
+        }
     }
 }
