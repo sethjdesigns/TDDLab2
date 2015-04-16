@@ -54,11 +54,12 @@ namespace TDDLab2
             {
                 if ((this.age >= 18) && (this.social.Length == 11))
                 {
-
                     return true;
                 }
-
-               
+                else
+                {
+                    return false;
+                }
             }
     }
 
