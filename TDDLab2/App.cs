@@ -45,6 +45,11 @@ namespace TDDLab2
                 var age = (int)(now - dob);
                 return age;
             }
+
+            public object canVote()
+            {
+                throw new NotImplementedException();
+            }
     }
 
 }
