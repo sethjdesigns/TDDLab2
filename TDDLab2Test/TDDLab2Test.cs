@@ -101,7 +101,7 @@ namespace TDDLab2Test
         [Fact]
         public void FormatLastFirst()
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var formatLastFirst = person1.formatLastFirst();
             var expected = "Allen, Brandon";
 

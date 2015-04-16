@@ -16,18 +16,21 @@ namespace TDDLab2
         public int age;
         public string firstName;
         public string lastName;
+        public float now;
+        public float dob;
+        public string[] names;
 
             public Person(string name, string dateOfBirth, string social)
             {
                 this.name = name;
-                var names = name.Split(' ');
-                string firstName = names[0];
-                string lastName = names[1];
+                names = name.Split();
+                firstName = names[0];
+                lastName = names[1];
                 this.dateOfBirth = dateOfBirth;
                 birthday = DateTime.Parse(dateOfBirth);
                 this.social = social;
-                var now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
-                var dob = float.Parse(birthday.ToString("yyyy.MMdd"));
+                now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
+                dob = float.Parse(birthday.ToString("yyyy.MMdd"));
                 age = (int)(now - dob);
             }
 
@@ -80,7 +83,8 @@ namespace TDDLab2
 
             public object formatLastFirst()
             {
-                throw new NotImplementedException();
+                var lastFirst = lastName + ", " + firstName;
+                return lastFirst;
             }
     }
 
