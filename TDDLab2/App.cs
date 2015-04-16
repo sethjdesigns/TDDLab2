@@ -52,9 +52,6 @@ namespace TDDLab2
 
             public object checkAge()
             {
-                var now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
-                var dob = float.Parse(birthday.ToString("yyyy.MMdd"));
-                var age = (int)(now - dob);
                 return age;
             }
 
