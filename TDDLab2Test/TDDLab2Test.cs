@@ -15,7 +15,7 @@ namespace TDDLab2Test
         public void CreateNewPerson() 
         {
             var person1 = new Person("Brandon");
-            var checkName = person1.addName();
+            var checkName = person1.checkName();
             var expected = "Brandon";
 
             Assert.Equal(expected, checkName);

@@ -9,18 +9,16 @@ namespace TDDLab2
 
     public class Person 
     {
-        private string p;
         private string name;
 
-            public Person(string p) 
+            public Person(string name) 
             {
-                this.p = p;
+                this.name = name;
             }
 
-            public string addName()
+            public string checkName()
             {
-                this.name = p;
-                return p;
+                return name;
             }
     }
 
