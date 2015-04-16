@@ -89,9 +89,9 @@ namespace TDDLab2
             public int CompareTo(Person other)
             {
                 // Alphabetic sort if birthday is equal. [A to Z]
-                if (this.birthday == other.birthday)
+                if (this.lastName == other.lastName)
                 {
-                    return this.lastName.CompareTo(other.lastName);
+                    return this.birthday.CompareTo(other.birthday);
                 }
 
                 // Default to lastname sort. [High to low]
