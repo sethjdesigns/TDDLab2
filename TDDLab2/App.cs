@@ -10,10 +10,14 @@ namespace TDDLab2
     public class Person 
     {
         private string name;
+        private string dateOfBirth;
+        public DateTime birthday;
 
-            public Person(string name) 
+            public Person(string name, string dateOfBirth)
             {
                 this.name = name;
+                this.dateOfBirth = dateOfBirth;
+                birthday = DateTime.Parse(dateOfBirth);
             }
 
             public string checkName()
@@ -21,9 +25,9 @@ namespace TDDLab2
                 return name;
             }
 
-            public object checkBirthday()
+            public DateTime checkBirthday()
             {
-                throw new NotImplementedException();
+                return birthday;
             }
     }
 

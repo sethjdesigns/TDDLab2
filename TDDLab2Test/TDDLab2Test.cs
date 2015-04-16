@@ -14,17 +14,18 @@ namespace TDDLab2Test
         [Fact]
         public void CreateNewPerson() 
         {
-            var person1 = new Person("Brandon");
+            var person1 = new Person("Brandon", "1990/3/17");
             var checkName = person1.checkName();
             var expected = "Brandon";
 
             Assert.Equal(expected, checkName);
         }
         
+        //Check to see if we can add birthday arg
         [Fact]
         public void GetBirthday()
         {
-            var person1 = new Person("Brandon");
+            var person1 = new Person("Brandon", "1990/3/17");
             var checkBirthday = person1.checkBirthday();
             var expected = new DateTime(1990, 3, 17);
 
