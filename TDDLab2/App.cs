@@ -14,10 +14,15 @@ namespace TDDLab2
         private DateTime birthday;
         private string social;
         public int age;
+        public string firstName;
+        public string lastName;
 
             public Person(string name, string dateOfBirth, string social)
             {
                 this.name = name;
+                var names = name.Split(' ');
+                string firstName = names[0];
+                string lastName = names[1];
                 this.dateOfBirth = dateOfBirth;
                 birthday = DateTime.Parse(dateOfBirth);
                 this.social = social;
@@ -60,6 +65,17 @@ namespace TDDLab2
                 {
                     return false;
                 }
+            }
+
+            public object newName()
+            {
+                this.name = "Seth";
+                return name;
+            }
+
+            public object formatFirstLast()
+            {
+                return name;
             }
     }
 

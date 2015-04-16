@@ -14,9 +14,9 @@ namespace TDDLab2Test
         [Fact]
         public void CreateNewPerson() 
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkName = person1.checkName();
-            var expected = "Brandon";
+            var expected = "Brandon Allen";
 
             Assert.Equal(expected, checkName);
         }
@@ -25,7 +25,7 @@ namespace TDDLab2Test
         [Fact]
         public void GetBirthday()
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkBirthday = person1.checkBirthday();
             var expected = new DateTime(1990, 3, 17);
 
@@ -36,7 +36,7 @@ namespace TDDLab2Test
         [Fact]
         public void GetSSN()
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkSocial = person1.checkSSN();
             var expected = "123-12-1234";
 
@@ -47,7 +47,7 @@ namespace TDDLab2Test
         [Fact]
         public void GetAge()
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkAge = person1.checkAge();
             var expected = 25;
 
@@ -58,7 +58,7 @@ namespace TDDLab2Test
         [Fact]
         public void ValidVoter() 
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkEligble = person1.canVote();
             var expected = true;
 
@@ -69,11 +69,33 @@ namespace TDDLab2Test
         [Fact]
         public void AgeProp()
         {
-            var person1 = new Person("Brandon", "1990/3/17", "123-12-1234");
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
             var checkAgeProp = person1.age;
             var expected = 25;
 
             Assert.Equal(expected, checkAgeProp);
+        }
+
+        [Fact]
+        public void ChangeName()
+        {
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
+            var newName = person1.newName();
+            var expected = "Seth";
+
+            Assert.Equal(expected, newName);
+
+
+        }
+
+        [Fact]
+        public void FormatFirstLast() 
+        {
+            var person1 = new Person("Brandon Allen", "1990/3/17", "123-12-1234");
+            var formatFirstLast = person1.formatFirstLast();
+            var expected = "Brandon Allen";
+
+            Assert.Equal(expected, formatFirstLast);
         }
     }
 }
