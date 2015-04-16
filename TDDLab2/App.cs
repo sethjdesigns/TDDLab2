@@ -40,7 +40,10 @@ namespace TDDLab2
 
             public object checkAge()
             {
-                throw new NotImplementedException();
+                var now = float.Parse(DateTime.Now.ToString("yyyy.MMdd"));
+                var dob = float.Parse(birthday.ToString("yyyy.MMdd"));
+                var age = (int)(now - dob);
+                return age;
             }
     }
 
